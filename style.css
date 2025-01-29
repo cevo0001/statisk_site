@@ -331,7 +331,7 @@ a{
     z-index: 7; /* Sørg for, at teksten er ovenpå billedet */
     width: 100%;
     padding: 10px 0;
-    font-size: 22px;
+    font-size: 12px;
     letter-spacing: 3px;
     color: white;
     font-weight: bold;
@@ -339,7 +339,7 @@ a{
     padding: 5px 10px;
     border-radius: 8px;
     margin-bottom: 5px;
-    margin-top: -40px;
+    margin-top: -30px;
 }
 
 .box-4, .box-8, .box-12{
@@ -353,7 +353,7 @@ a{
     position: relative;
     z-index: 7; /* Sørg for, at teksten er ovenpå billedet */
     width: 100%;
-    font-size: 25px;
+    font-size: 18px;
     letter-spacing: 3px;
     color: white;
     font-weight: bold;
@@ -361,7 +361,7 @@ a{
     padding: 5px 10px;
     border-radius: 5px;
     margin-bottom: 5px;
-    margin-top: -390px;
+    margin-top: -30px;
     opacity: 1;
 }
 
@@ -415,6 +415,47 @@ a{
         font-style: italic;
     }
     
+    .sale-badge {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 7; /* Sørg for, at teksten er ovenpå billedet */
+        width: 100%;
+        padding: 10px 0;
+        font-size: 22px;
+        letter-spacing: 3px;
+        color: white;
+        font-weight: bold;
+        background-color: rgb(111, 15, 15);
+        padding: 5px 10px;
+        border-radius: 8px;
+        margin-bottom: 5px;
+        margin-top: -40px;
+    }
+    
+    .box-4, .box-8, .box-12{
+        opacity: 0.8;
+    }
+    
+    .soldout {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 7; /* Sørg for, at teksten er ovenpå billedet */
+        width: 100%;
+        font-size: 25px;
+        letter-spacing: 3px;
+        color: white;
+        font-weight: bold;
+        background-color: rgba(41, 41, 41, 0.89);
+        padding: 5px 10px;
+        border-radius: 5px;
+        margin-bottom: 5px;
+        margin-top: -390px;
+        opacity: 1;
+    }
     
 
 }
