@@ -152,10 +152,10 @@ footer p{
     color: rgb(93, 93, 93);
     padding: 5px;
     margin: 12px;
-    letter-spacing: 5px;
+    letter-spacing: 2.5px;
     font-family: Roboto;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 10px;
 }
 
 
@@ -176,18 +176,21 @@ footer p{
     img {
         width: 200px;
         display: block; /* Sørger for, at billedet ikke får ekstra plads under sig */
-        margin-right: 580px;
+        margin-right: 750px;
     }
 
     .menu a {
         display: flex;
         font-size: 24px;  
-        margin-left: 250px;
+        margin: 5px;
         margin-top: 10px;
+        gap: 50px;
     }
+
 
     .menu{
         padding: 20px;
+        gap: 200px;
     }
 
     h1{
@@ -243,7 +246,20 @@ footer p{
         font-size: 42px;
     }
 
-
+   
+        footer p{
+            
+            border: 1.5px solid rgb(66, 66, 66);
+            height: 60px;
+            color: rgb(93, 93, 93);
+            padding: 5px;
+            margin: 12px;
+            letter-spacing: 6px;
+            font-family: Roboto;
+            font-weight: 500;
+            font-size: 12px;
+        }
+    
 }
 
 
@@ -263,26 +279,101 @@ footer p{
 
 .product_list_container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: auto; /* Definerer én række (kan tilpasses efter behov) */
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 30px;
+    padding: 20px; 
+}
+.box{
+    border: 1px solid rgb(212, 212, 212);
+    place-content: center;
+    align-items: center; 
+    transition: opacity 1s;
 }
 
-.box {
-    display: grid;
-    grid-template-columns: subgrid; /* Arver kolonner fra forældre-grid */
-    grid-template-rows: subgrid; /* Arver rækker fra forældre-grid */
-    border: 1px solid #ccc;
-    grid-row: 1 /span 3;
+.box:hover{
+opacity: 0.7;
 }
 
 .box img {
-    width: 70%;
-    height: auto;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;         /* Centrerer billedet horisontalt inden for flexbox */
+        display: block;         /* Gør billede til et block-element for bedre centering */  
 }
 
-p {
-    text-align: left;
+.box h4, .box p {
+    width: 100%; /* Matcher bredden af billedet */
+    color: black;
+    text-decoration: none;
 }
-h4{
-    text-align: center; /* Centerer teksten i hver boks */ 
+
+.box h4 {
+    font-size: 16px;
+    color: rgb(111, 15, 15);
+    text-decoration: none;
 }
+
+a{
+    text-decoration: none;
+}
+.box p{
+    font-size: 15px;
+    font-family: "Arapey", serif;
+    font-style: italic;
+}
+
+
+@media (min-width: 800px){
+    .product_list_container {
+        display: grid;
+        margin-top: 30px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto;
+        padding: 40px;
+        justify-content: center;
+    }
+    .box {
+        display: grid;
+        text-align: left; /* Holder teksten til venstre */
+        width: 79%; /* Matcher billedets bredde */
+        border: 1px solid rgb(212, 212, 212); /* Sørger for at border er tæt på */
+        margin: 30px auto;
+        transition: opacity 1s;
+    }
+
+    .box:hover{
+        opacity: 0.7;
+    }
+
+    
+    .box img {
+        width: 100%; /* Sørger for, at billedet fylder hele bredden af boksen */
+    }
+    
+    .box h4, .box p {
+        width: 100%; /* Matcher bredden af billedet */
+        color: black;
+        text-decoration: none;
+    }
+
+    .box h4 {
+        font-size: 22px;
+        color: rgb(111, 15, 15);
+        text-decoration: none;
+    }
+
+    a{
+        text-decoration: none;
+    }
+    .box p{
+        font-size: 20px;
+        font-family: "Arapey", serif;
+        font-style: italic;
+    }
+    
+    
+
+}
+
+
