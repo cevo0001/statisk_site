@@ -461,3 +461,99 @@ a{
 }
 
 
+/* ___________________________________________________________________________________________ */
+/* ___________________________________________________________________________________________ */
+/* ___________________________________________________________________________________________ */
+/* ___________________________________________________________________________________________ */
+/* ___________________________________________________________________________________________ */
+/* ___________________________________________________________________________________________ */
+/* ___________________________________________________________________________________________ */
+/* ___________________________________________________________________________________________ */
+/* ___________________________________________________________________________________________ */
+/* ___________________________________________________________________________________________ */
+/* ___________________________________________________________________________________________ */
+/* ___________________________________________________________________________________________ */
+/* PRODCUT PAGE */
+
+.product_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Tre kolonner */
+    margin: 0 auto; /* Centrerer hele containeren */
+    justify-items: center; /* Centrerer elementerne inde i hver grid-cell */
+    align-items: center; /* Centrerer elementerne vertikalt inde i hver grid-cell */
+}
+
+.kasse-1, .kasse-2, .kasse-3 {
+    display: grid;
+    margin-top: 1px;
+
+}
+
+#select1{
+    color: rgb(255, 255, 255);
+    background-color: rgb(111, 15, 15);
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 25px;
+}
+
+.add{
+    border: 2.5px solid rgb(111, 15, 15);
+    border-radius: 30px;
+    margin-top: 29px;
+    text-decoration: none;
+    color:rgb(0, 0, 0) ;
+    
+}
+.produkt{
+    color:rgb(111, 15, 15) ;
+}
+
+
+.kasse-1 img {
+    width: 85%; /* Sørger for at billedet fylder containeren uden at gå ud over */
+    height: auto; /* Bevarer billedets proportioner */
+    display: block; /* Gør at billedet opfører sig som et blok-element */
+    margin: 0 auto; /* Centrerer billedet horisontalt */
+    margin-top: 30px;
+    margin: 20px;
+}
+
+.checkout {
+    color: rgb(106, 68, 20);
+}
+
+@media (min-width:800px){
+
+
+    .product_container {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr; /* Tre kolonner */
+    }
+    
+    .kasse-1, .kasse-2, .kasse-3 {
+        display: grid;
+        gap: 0px;
+        font-size: 28px;
+    }
+
+    .kasse-3{
+        line-height: 100px;
+        background-color: rgba(241, 241, 241, 0.767);
+        padding: 50px;
+    }
+    
+    .kasse-1 img {
+        width: 70%; /* Sørger for at billedet fylder containeren uden at gå ud over */
+        height: auto; /* Bevarer billedets proportioner */
+        display: block; /* Gør at billedet opfører sig som et blok-element */
+        margin-top: 80px;
+        margin: 90px;
+    }
+    
+
+
+}
+
+
