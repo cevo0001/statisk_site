@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+</head>
+<body>
+
+    <h1>Liste</h1>
+    <ul></ul>
+
+
+    <script>
+        const mitArray = ["Teter", "Troels", "Keld", "Alan"]
+
+        console.log(mitArray);
+
+        const nytArray = mitArray.map(element =>`<li>navn: ${element}</li>`);
+
+        console.log(nytArray);
+
+        const string = nytArray.join("");
+
+        console.log(string);
+
+        document.querySelector("ul").innerHTML = string;
+    </script>
+</body>
+</html>

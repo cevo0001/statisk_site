@@ -12,9 +12,9 @@ fetch(`https://kea-alt-del.dk/t7/api/products/${productId}`)
             <div class="kasse-2">
                 <h2 class="produkt"><b>${data.productdisplayname}</b></h2>
                 <h4>Unisex</h4>
-                <h3>ID</h3>
-                <h4>1525</h4>
-                <h3>Color</h3>
+                <h4>ID</h4>
+                <h4>${data.id}</h4>
+                <h4>Color</h4>
                 <h4>Navy Blue</h4>
                 <br>
                 <h2 class="produkt">${data.brandname}</h2>
@@ -33,3 +33,12 @@ fetch(`https://kea-alt-del.dk/t7/api/products/${productId}`)
             </div>
             `;
     })
+
+
+
+
+
+
+
+
+    
