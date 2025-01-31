@@ -18,7 +18,7 @@ fetch(`https://kea-alt-del.dk/t7/api/products/${productId}`)
                 <h4>Navy Blue</h4>
                 <br>
                 <h2 class="produkt">${data.brandname}</h2>
-                <h3><b>${data.price}</b></h3>
+                <h3><b>DKK ${data.price}</b></h3>
             </div>
     
             <div class="kasse-3">
