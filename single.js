@@ -6,7 +6,7 @@ fetch(`https://kea-alt-del.dk/t7/api/products/${productId}`)
     .then((data) => {
         product_container.innerHTML = `
             <div class="kasse-1">
-                <img src="https://kea-alt-del.dk/t7/images/webp/640/${productId}.webp" alt="produktsbillede">
+                <img src="https://kea-alt-del.dk/t7/images/webp/640/${data.id}.webp" alt="produktsbillede">
             </div>
     
             <div class="kasse-2">
@@ -33,6 +33,7 @@ fetch(`https://kea-alt-del.dk/t7/api/products/${productId}`)
             </div>
             `;
     })
+    
 
 
 
