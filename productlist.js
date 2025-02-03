@@ -1,6 +1,7 @@
 
 const theseason = new URLSearchParams(window.location.search).get("season");
 let product_list_container = document.querySelector(".product_list_container");
+document.querySelector("h1").textContent= theseason;
 
 fetch(`https://kea-alt-del.dk/t7/api/products?season=${theseason}`)
     .then(response => response.json())
