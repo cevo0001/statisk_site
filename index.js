@@ -8,8 +8,10 @@ fetch(`https://kea-alt-del.dk/t7/api/seasons/`)
         console.log(seasons);
         const markup = seasons.map(
         (season) =>`<div class="spring">
-                <a href="productlist.html">${season.season}</a>
+                <a href="productlist.html?season=${season.season}">${season.season}</a>
             </div>`
         ).join("");
         season_list_container.innerHTML=markup;
         }
+
+        

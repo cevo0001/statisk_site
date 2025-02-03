@@ -1,4 +1,7 @@
-let productId = 1525;
+const urlParams = new URLSearchParams(window.location.search);
+let productId = urlParams.get("id");
+
+
 let product_container = document.querySelector(".product_container");
 
 fetch(`https://kea-alt-del.dk/t7/api/products/${productId}`)
@@ -33,6 +36,7 @@ fetch(`https://kea-alt-del.dk/t7/api/products/${productId}`)
             </div>
             `;
     })
+
     
 
 
