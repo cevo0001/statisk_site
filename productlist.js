@@ -12,14 +12,9 @@ fetch(`https://kea-alt-del.dk/t7/api/products?season=${theseason}`)
         const markup = products.map(
         (product) =>`
                 
-                <a href="product.html?id=${product.id}" class="box box-1 ${product.soldout && "soldout"} ${product.discount && "sale-badge"}">
+                <a href="product.html?id=${product.id}" class="box box-1">
                   <img src="https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp" alt="produktsbillede" />
-                  <div class="sale-badge ${!product.discount && "skjul"}">
-                    <p>-${product.discount}%</p>
-                  </div>
-                  <div class="soldout ${!product.soldout && "skjul"}">
-                  <p> Sold out </p>
-                  </div>
+                  <div class="${product.soldout && "soldout"} ${product.discount && "sale-badge"}">
                 <h4>${product.productdisplayname}</h4>
                 <p> ${product.brandname}, ${product.articletype} <br> DKK <b>${product.price}</b> <br> <u>more info...</u></p>
             </a>`
