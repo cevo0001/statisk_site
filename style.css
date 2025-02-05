@@ -87,7 +87,7 @@ img {
 
 .spring, .summer, .fall, .winter{
   display: flex;
-  border: 1px solid rgb(120, 95, 45);
+  border: 1px solid rgb(65, 65, 65);
   background-color:  rgb(111, 15, 15);
   height: 70px;
   justify-content: center; /* Centrerer horisontalt */
@@ -284,6 +284,8 @@ footer p{
     gap: 30px;
     padding: 20px; 
 }
+
+
 .box{
     border: 1px solid rgb(212, 212, 212);
     place-content: center;
@@ -365,6 +367,10 @@ a{
     opacity: 1;
 }
 
+.skjul {
+    visibility: hidden;
+}
+
 
 
 @media (min-width: 800px){
@@ -376,6 +382,7 @@ a{
         padding: 40px;
         justify-content: center;
     }
+
     .box {
         display: grid;
         text-align: left; /* Holder teksten til venstre */
@@ -457,7 +464,9 @@ a{
         opacity: 1;
     }
     
-
+    .skjul {
+        visibility: hidden;
+    }
 }
 
 
