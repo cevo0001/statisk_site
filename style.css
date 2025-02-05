@@ -367,7 +367,17 @@ a{
     opacity: 1;
 }
 
+.skjul{
+    visibility: hidden;
+}
 
+.vis{
+    visibility: visible;
+}
+
+.status p{
+    color: white;
+}
 
 
 @media (min-width: 800px){
@@ -432,7 +442,7 @@ a{
         color: white;
         font-weight: bold;
         background-color: rgb(111, 15, 15);
-        padding: 5px 10px;
+        padding: 8px 10px;
         border-radius: 8px;
         margin-bottom: 5px;
         margin-top: -40px;
@@ -451,13 +461,13 @@ a{
         width: 100%;
         font-size: 25px;
         letter-spacing: 3px;
-        color: white;
+        color: rgb(255, 255, 255);
         font-weight: bold;
-        background-color: rgba(41, 41, 41, 0.89);
-        padding: 5px 10px;
+        background-color: rgba(53, 53, 53, 0.89);
+        padding: 18px 10px;
         border-radius: 5px;
         margin-bottom: 5px;
-        margin-top: -390px;
+        margin-top: -400px;
         opacity: 1;
     }
     

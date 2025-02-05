@@ -14,7 +14,8 @@ fetch(`https://kea-alt-del.dk/t7/api/products?season=${theseason}`)
                 
                 <a href="product.html?id=${product.id}" class="box box-1">
                   <img src="https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp" alt="produktsbillede" />
-                  <div class="${product.soldout && "soldout"} ${product.discount && "sale-badge"}">
+                  <div class="skjul soldout ${product.soldout ? "vis" : ""}"><p>Sold out</p></div>
+                  <div class="skjul sale-badge ${product.discount ? "vis" : ""}"><p>-${product.discount}%</p></div>
                 <h4>${product.productdisplayname}</h4>
                 <p> ${product.brandname}, ${product.articletype} <br> DKK <b>${product.price}</b> <br> <u>more info...</u></p>
             </a>`
