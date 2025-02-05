@@ -348,7 +348,7 @@ a{
     opacity: 0.8;
 }
 
-.soldout {
+.soldout, .soldout p{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -357,7 +357,7 @@ a{
     width: 100%;
     font-size: 18px;
     letter-spacing: 3px;
-    color: white;
+    color: white !important;
     font-weight: bold;
     background-color: rgba(41, 41, 41, 0.89);
     padding: 5px 10px;
@@ -373,10 +373,6 @@ a{
 
 .vis{
     visibility: visible;
-}
-
-.status p{
-    color: white;
 }
 
 
