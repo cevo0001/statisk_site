@@ -7,7 +7,7 @@ document.querySelectorAll("button").forEach((knap) => knap.addEventListener("cli
 
 let allData;
 
-fetch(`https://kea-alt-del.dk/t7/api/products?season=${theseason}`)
+fetch(`https://kea-alt-del.dk/t7/api/products?season=${theseason}&limit=100`)
     .then(response => response.json())
     .then((data) => {allData= data; showList(data);});
 
