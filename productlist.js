@@ -3,9 +3,13 @@ const theseason = new URLSearchParams(window.location.search).get("season");
 let product_list_container = document.querySelector(".product_list_container");
 document.querySelector("h1").textContent= theseason;
 
+document.querySelectorAll("button").forEach((knap) => knap.addEventListener("click", showFiltered));
+
+let allData;
+
 fetch(`https://kea-alt-del.dk/t7/api/products?season=${theseason}`)
     .then(response => response.json())
-    .then((data) => showList(data));
+    .then((data) => {allData= data; showList(data);});
 
     function showList(products){ 
         console.log(products);
@@ -22,3 +26,25 @@ fetch(`https://kea-alt-del.dk/t7/api/products?season=${theseason}`)
         ).join("");
         product_list_container.innerHTML=markup;
         }
+
+        function showFiltered() {
+          const filter = this.dataset.filter; // Henter værdien fra knappen
+          console.log("Filter valgt:", filter); // Debugging
+        
+          if (!allData) return; // Hvis data ikke er indlæst, stop
+        
+          let filteredProducts;
+        
+          if (filter === "All") {
+            filteredProducts = allData;
+          } else if (filter === "Sale") {
+            filteredProducts = allData.filter((product) => product.discount > 0);
+          } else if (filter === "Accessories") {
+            filteredProducts = allData.filter((product) => product.category === "Accessories");
+          } else {
+            filteredProducts = allData.filter((product) => product.gender === filter);
+          }
+        
+          showList(filteredProducts);
+        }
+        

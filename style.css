@@ -385,7 +385,7 @@ a{
     visibility: visible;
 }
 
-.filter a{
+.filter button{
     text-decoration: none;
     color: black;
     background-color: white;
@@ -397,14 +397,14 @@ a{
 }
 
 .filter{
-    display: flex;
+display: flex;
 justify-content: center;
 gap: 20px;
 margin-top: 20px;
 flex-wrap: wrap;
 }
 
-.filter a:hover{
+.filter button:hover{
 background-color: rgb(111, 28, 28);
 color: white;
 }
@@ -502,7 +502,7 @@ color: white;
     }
     
     
-    .filter a{
+    .filter button{
         text-decoration: none;
         color: black;
         background-color: white;
@@ -520,7 +520,7 @@ color: white;
     margin-top: 20px;
     }
     
-    .filter a:hover{
+    .filter button:hover{
     background-color: rgb(111, 28, 28);
     color: white;
     }
