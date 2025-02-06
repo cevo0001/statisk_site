@@ -385,6 +385,30 @@ a{
     visibility: visible;
 }
 
+.filter a{
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    border: 2px solid rgb(111, 28, 28);
+    font-size: 13px;
+    padding: 9px;
+    transition: transform 1s;
+   
+}
+
+.filter{
+    display: flex;
+justify-content: center;
+gap: 20px;
+margin-top: 20px;
+flex-wrap: wrap;
+}
+
+.filter a:hover{
+background-color: rgb(111, 28, 28);
+color: white;
+}
+
 
 @media (min-width: 800px){
     .product_list_container {
@@ -477,7 +501,30 @@ a{
         opacity: 1;
     }
     
-   
+    
+    .filter a{
+        text-decoration: none;
+        color: black;
+        background-color: white;
+        border: 2px solid rgb(111, 28, 28);
+        font-size: 22px;
+        padding: 14px;
+        transition: transform 1s;
+       
+    }
+    
+    .filter{
+        display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+    }
+    
+    .filter a:hover{
+    background-color: rgb(111, 28, 28);
+    color: white;
+    }
+    
 }
 
 
