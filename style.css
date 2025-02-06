@@ -626,6 +626,8 @@ color: white;
         display: grid;
         grid-column: 2 /span 1;
         font-size: 25px;
+        align-self: start;
+        margin-top: 100px;
     }
 
     .kasse-3{
@@ -634,8 +636,10 @@ color: white;
         grid-row: 1 /span 1;
         line-height: 100px;
         background-color: rgba(241, 241, 241, 0.767);
-        padding: 50px;
-        font-size: 22px;
+        padding: 90px;
+        border-radius: 20px;
+        font-size: 24px;
+        border: 2px solid rgb(111, 15, 15) ;
     }
     
     .kasse-1 img {

@@ -21,7 +21,9 @@ fetch(`https://kea-alt-del.dk/t7/api/products/${productId}`)
                 <h4>Navy Blue</h4>
                 <br>
                 <h2 class="produkt">${data.brandname}</h2>
-                <h3><b>DKK ${data.price}</b></h3>
+                <h3>DKK ${data.price}</h3>
+                <h3 class="pris skjul ${data.discount && "vis"}">  <b>Now DKK ${Math.floor(data.price * (1-data.discount / 100))} </h3>
+                
             </div>
     
             <div class="kasse-3">
