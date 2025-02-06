@@ -11,6 +11,7 @@ fetch(`https://kea-alt-del.dk/t7/api/products?season=${theseason}`)
     .then(response => response.json())
     .then((data) => {allData= data; showList(data);});
 
+
     function showList(products){ 
         console.log(products);
         const markup = products.map(
