@@ -333,22 +333,27 @@ a{
     z-index: 7; /* Sørg for, at teksten er ovenpå billedet */
     width: 100%;
     padding: 10px 0;
-    font-size: 12px;
     letter-spacing: 3px;
     color: white;
     font-weight: bold;
     background-color: rgb(111, 15, 15);
     padding: 5px 10px;
-    border-radius: 8px;
-    margin-bottom: 5px;
-    margin-top: -30px;
+    border-radius: 9px;
 }
+.sale-badge p {
+    color: white !important;  /* Sørger for, at teksten er hvid */
+    font-weight: bold;  /* Gør teksten fed */
+    margin: 0;  /* Fjerner eventuel margin, der kan skabe ekstra plads */
+    text-align: center;
+    font-size: 15px;
+}
+
 
 .box-4, .box-8, .box-12{
     opacity: 0.8;
 }
 
-.soldout, .soldout p{
+.soldout {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -357,14 +362,19 @@ a{
     width: 100%;
     font-size: 18px;
     letter-spacing: 3px;
-    color: white !important;
-    font-weight: bold;
-    background-color: rgba(41, 41, 41, 0.89);
-    padding: 5px 10px;
+    background-color: rgba(41, 41, 41, 0.89); /* Baggrund for div'en */
+    padding: 8px 10px;
     border-radius: 5px;
-    margin-bottom: 5px;
-    margin-top: -30px;
+    margin-bottom: 60px;
+    margin-top: -120px;
     opacity: 1;
+}
+
+.soldout p {
+    color: white !important;  /* Sørger for, at teksten er hvid */
+    font-weight: bold;  /* Gør teksten fed */
+    margin: 0;  /* Fjerner eventuel margin, der kan skabe ekstra plads */
+    text-align: center;
 }
 
 .skjul{
@@ -438,7 +448,7 @@ a{
         color: white;
         font-weight: bold;
         background-color: rgb(111, 15, 15);
-        padding: 8px 10px;
+        padding: 9px 10px;
         border-radius: 8px;
         margin-bottom: 5px;
         margin-top: -40px;
@@ -462,7 +472,7 @@ a{
         background-color: rgba(53, 53, 53, 0.89);
         padding: 18px 10px;
         border-radius: 5px;
-        margin-bottom: 5px;
+        
         margin-top: -400px;
         opacity: 1;
     }
@@ -487,31 +497,38 @@ a{
 
 .product_container {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Tre kolonner */
+    grid-template-columns: 1fr 1fr; /* To kolonner */
     margin: 0 auto; /* Centrerer hele containeren */
     justify-items: center; /* Centrerer elementerne inde i hver grid-cell */
     align-items: center; /* Centrerer elementerne vertikalt inde i hver grid-cell */
+    gap: 20px;
 }
 
-.kasse-1, .kasse-2, .kasse-3 {
+.kasse-3{
     display: grid;
-    margin-top: 1px;
-
+    grid-column: 1 /span 2;
+    grid-row: 2 /span 1;
+   
 }
+
 
 #select1{
     color: rgb(255, 255, 255);
     background-color: rgb(111, 15, 15);
-    padding: 20px;
-    font-size: 20px;
+    padding: 10px;
+    font-size: 15px;
     font-weight: 500;
     border-radius: 25px;
+    width: 140px;
+    justify-self: center;
 }
 
 .add{
-    border: 2.5px solid rgb(111, 15, 15);
+    border: 2px solid rgb(111, 15, 15);
     border-radius: 30px;
+    padding: 10px;
     margin-top: 29px;
+    margin: 20px;
     text-decoration: none;
     color:rgb(0, 0, 0) ;
     
@@ -528,30 +545,50 @@ a{
     margin: 0 auto; /* Centrerer billedet horisontalt */
     margin-top: 30px;
     margin: 20px;
+    border-radius: 20px;
+    border: 2px solid rgb(111, 15, 15) ;
 }
 
 .checkout {
-    color: rgb(106, 68, 20);
+    color: rgb(111, 15, 15) ;
+    text-align: center;
+    font-size: 16px;
 }
+.kasse-3{
+    background-color: rgba(241, 241, 241, 0.767);
+    padding: 50px;
+}
+
 
 @media (min-width:800px){
 
 
     .product_container {
         display: grid;
-        grid-template-columns: 2fr 1fr 1fr; /* Tre kolonner */
+        grid-template-columns:1fr 1fr 1fr; /* Tre kolonner */
+        justify-items: center;
+        align-items: center;
     }
     
-    .kasse-1, .kasse-2, .kasse-3 {
+    .kasse-1{
         display: grid;
-        gap: 0px;
-        font-size: 28px;
+        grid-column: 1 /span 1;
+    }
+
+    .kasse-2{
+        display: grid;
+        grid-column: 2 /span 1;
+        font-size: 25px;
     }
 
     .kasse-3{
+        display: grid;
+        grid-column: 3 /span 1;
+        grid-row: 1 /span 1;
         line-height: 100px;
         background-color: rgba(241, 241, 241, 0.767);
         padding: 50px;
+        font-size: 22px;
     }
     
     .kasse-1 img {
@@ -559,11 +596,10 @@ a{
         height: auto; /* Bevarer billedets proportioner */
         display: block; /* Gør at billedet opfører sig som et blok-element */
         margin-top: 80px;
-        margin: 90px;
+        margin: 100px;
+    
     }
     
-
-
 }
 
 
